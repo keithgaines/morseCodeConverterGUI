@@ -29,7 +29,7 @@ def convert():
 # ---------- UI Setup ---------- # 
 window = tk.Tk()
 window.title("Morse Code Converter")
-window.geometry("900x300")
+
 
 title = tk.Label(padx=10)
 title.config(text="Morse Code Converter", font=("Times new roman", 35, "bold"))
