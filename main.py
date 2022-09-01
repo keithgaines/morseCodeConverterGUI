@@ -13,18 +13,18 @@ converted_morse = []
 
 
 def convert(): 
-    letter = input_word.get()
-    lowercase_word = letter.lower()
-    your_word.config(text=lowercase_word)
-    for i in lowercase_word:
+    letter = input_word.get() # gets input from input_word entry
+    lowercase_word = letter.lower() # converts input to lowercase
+    your_word.config(text=lowercase_word) # puts lowercase input on your word label
+    for i in lowercase_word: # processes whitespace characters as whitespace
         if i == ' ':
             i == ' '
-        else:
-            letters = converter_dict[i]
-            converted_morse.append(letters)
-    morse_output = ' '.join([str(item) for item in converted_morse])
-    translated_output.config(text=morse_output)
-    converted_morse.clear()
+        else: # gets value from key, assigns it to letters variable, and appends letter variable to converted_morse
+            letters = converter_dict[i] 
+            converted_morse.append(letters) 
+    morse_output = ' '.join([str(item) for item in converted_morse]) 
+    translated_output.config(text=morse_output) 
+    converted_morse.clear() 
 
 # ---------- UI Setup ---------- # 
 window = tk.Tk()
