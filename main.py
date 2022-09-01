@@ -19,6 +19,9 @@ def convert():
         else:
             letters = converter_dict[i]
             converted_morse.append(letters)
+    morse_output = ' '.join([str(item) for item in converted_morse])
+    translated_output.config(text=morse_output)
+    converted_morse.clear()
 
 
 window = tk.Tk()
@@ -44,11 +47,11 @@ imci.config(text="in morse code is ")
 imci.grid(row=2, column=1)
 
 translated_output = tk.Label()
-translated_output.config(text=converted_morse)
+translated_output.config(text=" ")
 translated_output.grid(row=2, column=2)
 
 convert_button = tk.Button(text="Convert", command=convert)
 convert_button.grid(row=3, column=1)
 
 window.mainloop()
-print(converted_morse)
+
